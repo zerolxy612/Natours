@@ -11,7 +11,7 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  backface-visibility: hidden;
+  backface-visibility: hidden; //定义当元素不面向屏幕时是否可见
   margin-bottom: 6rem;
 
   &--main {
@@ -44,7 +44,7 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; //将背景颜色渐变的效果值=只应用于文字当中
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
@@ -65,6 +65,6 @@ body {
   font-size: $default-font-size;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 30px; //类选择器 除了最后一个孩子的其他孩子
   }
 }
