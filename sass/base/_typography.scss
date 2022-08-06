@@ -45,6 +45,7 @@ body {
     $color-primary-dark
   );
   -webkit-background-clip: text; //将背景颜色渐变的效果值=只应用于文字当中
+  background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
