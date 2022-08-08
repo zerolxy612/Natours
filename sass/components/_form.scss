@@ -48,6 +48,45 @@
 
   &__radio-group {
     display: inline-block;
-    width: 50%;
+    width: 49%;
+  }
+  &__radio-input{
+    display: none;
+  }
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+  &__radio-button {
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $color-primary;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+// 兄弟选择器
+  &__radio-input:checked ~ &__radio-label &__radio-button::after{
+    opacity: 1;
   }
 }
