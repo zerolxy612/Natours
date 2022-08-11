@@ -6,3 +6,10 @@
   }
 }
 // 清除浮动所带来的高度坍塌
+
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
