@@ -9,6 +9,16 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include response(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include response(phone) {
+    transform: skewX(0);
+  }
+
   // & > * {
   //   transform: skewX(12deg); //img已经做了一次transfrom 优先度更高
   // }
@@ -25,6 +35,10 @@
     clip-path: circle(50% at 50% 50%); //元素的形状 此处定义的都是圆形
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @include response(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -36,6 +50,9 @@
 
   &__text {
     transform: skewX(12deg);
+    @include response(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

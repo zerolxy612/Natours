@@ -15,6 +15,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include response(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-sizing: 0 1rem 2rem rgba($color-black, 0.1);
@@ -49,8 +53,13 @@
   &__radio-group {
     display: inline-block;
     width: 49%;
+
+    @include response(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
-  &__radio-input{
+  &__radio-input {
     display: none;
   }
   &__radio-label {
@@ -67,7 +76,7 @@
     display: inline-block;
     position: absolute;
     left: 0;
-    top: -.4rem;
+    top: -0.4rem;
 
     &::after {
       content: '';
@@ -81,12 +90,12 @@
       top: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      transition: opacity .2s;
+      transition: opacity 0.2s;
     }
   }
 
-// 兄弟选择器
-  &__radio-input:checked ~ &__radio-label &__radio-button::after{
+  // 兄弟选择器
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
   }
 }
